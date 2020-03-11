@@ -1,0 +1,24 @@
+<div>
+    <table border='1' style="margin-top: 3vh; margin-left: 50px; width: 500px;">
+  
+      <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Phone</td>
+       
+      </tr>
+  
+      
+      <tr  *ngFor= "let index of Repdata" >
+    
+        <td [routerLink] = "['/Next/',index.ID]" (click)="getDetails(index.ID)"> {{index.Fname}}</td>
+        <td [routerLink] = "['/Next/',index.ID]" (click)="getDetails(index.ID)">{{index.Lname}}</td>
+        <td [routerLink] = "['/Next/',index.ID]" (click)="getDetails(index.ID)">{{index.Mob}}</td>
+
+      </tr>
+    
+    </table>
+    
+  </div>
+  
+  <router-outlet></router-outlet>
